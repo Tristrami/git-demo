@@ -689,3 +689,36 @@ git reset 744b7d6c98d9d4e7bce67b1fda77106d3eb9156b
 git reset --hard 744b7d6c98d9d4e7bce67b1fda77106d3eb9156b
 ```
 
+
+
+## 上传整个项目
+
+这里遇到了个小坑，上传整个项目到 githun 的时候，发现在 github 上 demo-repo 和 demo-repo2 打不开
+
+```
+git
+├── demo-repo
+│   ├── README.md
+│   └── index.html
+├── demo-repo2
+│   ├── README.md
+│   └── index.html
+├── git.md
+└── img
+    ├── Accept-Both-Changes.png
+    ├── add-comments-on-code.png
+    ├── check-out-pull-request.png
+    ├── create-pull-request.png
+    ├── demo-repo.png
+    ├── demo-repo2.png
+    ├── merge-completed.png
+    ├── merge-conflict.png
+    ├── pull-request.png
+    └── ssh-key.png
+```
+
+这里需要清除  demo-repo 和 demo-repo2 中的 .git/ 目录，并且把两个项目从 git 的 work tree 中删除
+
+- 删除 `.git` 目录 : `rm -rf .git/`
+- 把两个项目从 git 的 work tree 中删除 : `git rm --cached demo-repo`，`git rm --cached demo-rep2`
+- 回到 git 目录下 : `git add .` => `git commit -m "remove demo-repo and demo-repo2 from work tree"` => `git push origin main`
