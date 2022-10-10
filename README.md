@@ -166,7 +166,6 @@ init.defaultbranch=main
 - 使用 `git push origin main` 来将代码提交到 `origin` 仓库的 `main` 分支
 - 如果当前仓库是使用 `git clone` 拉下来的项目，那么 `origin` 是已知的，如果是在本地新创建的项目，origin 需要自己指定，最简单的方式先在 github 上创建一个新 repo，然后复制 repo 的 url，使用 `git remote add origin <url>` 来指定 `origin`
 - 使用 `git checkout -b <branchName>` 来创建一个新分支，使用 `git checkout <branchName>` 来切换分支
-- 使用 `git checkout -b <branchName>` 来创建一个新分支，使用 `git checkout <branchName>` 来切换分支
 
 
 
