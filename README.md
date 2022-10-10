@@ -1,10 +1,23 @@
 # Git
 
-
-
-[toc]
-
-
+- [Git](#git)
+  - [Basic](#basic)
+    - [demo-repo](#demo-repo)
+    - [SSH-KEY](#ssh-key)
+    - [配置 git](#配置-git)
+    - [git 常用命令](#git-常用命令)
+    - [demo-repo2](#demo-repo2)
+  - [Branching](#branching)
+    - [在本地创建新分支](#在本地创建新分支)
+    - [提交新分支到 Github](#提交新分支到-github)
+    - [在 Github 提交 pull requset](#在-github-提交-pull-requset)
+    - [拉取更新后的代码](#拉取更新后的代码)
+    - [删除已经合并的 branch](#删除已经合并的-branch)
+    - [提交冲突](#提交冲突)
+  - [Undoing](#undoing)
+    - [undoing add](#undoing-add)
+    - [undoing commit](#undoing-commit)
+  - [上传整个项目](#上传整个项目)
 
 ## Basic
 
@@ -18,7 +31,7 @@
 
 在 vscode 中使用 git 通过 http url 从 github 拉取 demo-repo
 
-```
+```shell
 git clone https://github.com/Tristrami/demo-repo.git
 ```
 
